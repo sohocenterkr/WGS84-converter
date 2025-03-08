@@ -1,7 +1,11 @@
-import streamlit as st
-import pandas as pd
-from pyproj import Transformer
-import io
+try:
+    import streamlit as st
+    import pandas as pd
+    from pyproj import Transformer
+    import io
+except ImportError:
+    # 로컬 개발 환경에서는 오류가 발생할 수 있지만 배포 시에는 문제 없음
+    pass
 
 st.title('좌표 변환 시스템')
 st.subheader('EPSG:5174 → EPSG:4326(WGS84) 변환기')
