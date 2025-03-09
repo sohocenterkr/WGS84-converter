@@ -51,8 +51,8 @@ elif conversion_type == "CSV/Excel 파일 변환":
     uploaded_file = st.file_uploader("CSV 또는 Excel 파일 업로드", type=["csv", "xlsx", "xls"])
     
     if uploaded_file is not None:
-        x_col = st.text_input("X 좌표 컬럼명", "좌표정보X")
-        y_col = st.text_input("Y 좌표 컬럼명", "좌표정보Y")
+        x_col = st.text_input("X 좌표 컬럼명", "좌표정보X(EPSG5174)")
+        y_col = st.text_input("Y 좌표 컬럼명", "좌표정보Y(EPSG5174)")
         
         if st.button("파일 변환"):
             try:
